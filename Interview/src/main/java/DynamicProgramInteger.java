@@ -3,10 +3,21 @@ import java.util.List;
 
 public class DynamicProgramInteger {
 	
+	//fibonacciNumberSeries
+	//fibonacciRecursion
+	//sumOfTwo in array
+	//factorial
+	
+	
 	public static void main(String args[]) {
 		DynamicProgramInteger obj=new DynamicProgramInteger();
 		//obj.fibonacciNumberSeries();
-		obj.sumOfTwo(new int[]{2,1,7,4,5,9},9);
+		//obj.sumOfTwo(new int[]{2,1,7,4,5,9},9);
+		obj.checkPrimeNumber();
+	}
+	
+	public void missingNumber() {
+		int[] numbers= {1,2,3,4,5,6,7,8,10};
 	}
 	
 	public void fibonacciNumberSeries() {
@@ -27,6 +38,26 @@ public class DynamicProgramInteger {
 		System.out.println(listFibonacciSeries);
 	}
 	
+	public void checkPrimeNumber() {
+		int input=11;
+		int i=2;
+		while(i<=input/2) {
+			if(input%i==0) {
+				System.out.println("Not a prime number");
+				return;
+			}
+			i++;
+		}
+		System.out.println("Prime number");
+	}
+	
+	public int fibonacci(int n) {
+		if(n<=1)
+			return n;
+		else
+			return fibonacci(n-1)+fibonacci(n-2);
+	}
+	
 	public void sumOfTwo(int numbers[],int sumValue) {
 		for(int i=0;i<numbers.length;i++) {
 			for(int j=i;j<numbers.length;j++){
@@ -35,6 +66,13 @@ public class DynamicProgramInteger {
 				}
 			}
 		}
+	}
+	
+	public int factorial(int n) {
+		if(n==1)
+			return n;
+		else
+			return n*factorial(n-1);
 	}
 
 }

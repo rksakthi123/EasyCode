@@ -6,11 +6,32 @@ import java.util.Stack;
 
 public class DynamicProgramsString {
 
+	
+	//checkVowelsInString
+	//reverseWordsInString
+	//checkAnagram
+	//removeDuplicateInString
+	//checkBalancedString
+	
 	public static void main(String[] args) {
 		DynamicProgramsString obj=new DynamicProgramsString();
 		obj.checkAnagram();
 		obj.reverseWordsInString();
+		obj.checkVowelsInString();
 
+	}
+	
+	public void checkVowelsInString() {
+		System.out.println("checkVowelsInString:");
+		System.out.println("-----------------------");
+		String input="sssss";
+		if(input.matches(".*[aeiou].*")) {
+			System.out.println("Vowels present in string");
+		}
+		else {
+			System.out.println("Vowels not present in string");
+		}
+		System.out.println("==============================================\n\n");
 	}
 	
 	public void reverseWordsInString() {
@@ -22,7 +43,7 @@ public class DynamicProgramsString {
 			output=str+" "+output;
 		}
 		System.out.println(output);
-		System.out.println("==============================================");
+		System.out.println("==============================================\n\n");
 	}
 	
 	public void checkAnagram() {
@@ -56,7 +77,7 @@ public class DynamicProgramsString {
 		else {
 			System.out.println("Not Anagram");
 		}
-		System.out.println("==============================================");
+		System.out.println("==============================================\n\n");
 		
 	}
 	

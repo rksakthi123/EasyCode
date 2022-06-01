@@ -12,7 +12,7 @@ public class APIAutomation {
 	@Test
 	public void testGetApiCall() {
 		RequestSpecification request=RestAssured.given();
-		//request.baseUri("http://tul1mdq1rrm01:8095/v1/daq/ingestcopytypexref?sourceId=25675");
+		request.baseUri("http://tul1mdq1rrm01:8095/v1/daq/ingestcopytypexref?sourceId=25675");
 		Response response=request.get("http://tul1mdq1rrm01:8095/v1/daq/ingestcopytypexref?sourceId=25675");
 		System.out.println(response.asPrettyString());
 	}
