@@ -18,7 +18,25 @@ public class DynamicProgramsString {
 		obj.checkAnagram();
 		obj.reverseWordsInString();
 		obj.checkVowelsInString();
+		obj.wordsCount();
 
+	}
+	
+	public void wordsCount() {
+		System.out.println("checkVowelsInString:");
+		System.out.println("-----------------------");
+		String words[]= {"india","sakthi","tamil","sakthi","tamil","india","sakthi"};
+		Map<String, Integer> mapCount=new HashMap<String, Integer>();
+		for(String word:words) {
+			if(!mapCount.containsKey(word)) {
+				mapCount.put(word, 1);
+			}
+			else {
+				mapCount.put(word, mapCount.get(word)+1);
+			}
+		}
+		System.out.println(mapCount);
+		System.out.println("==============================================\n\n");
 	}
 	
 	public void checkVowelsInString() {
